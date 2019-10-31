@@ -3,6 +3,13 @@ require_once "../Models/Connection.php";
 require_once "../Models/Users.php";
 date_default_timezone_set('America/Maceio');
 
+$usr_error_bool = false;
+$pass_error_bool = false;
+$con_error_bool = false;
+$field_error_bool = false;
+$success_bool = false;
+
+
 if(isset($_POST['nome'])) {
     $login = addslashes($_POST['login']);
     $password = addslashes($_POST['senha']);
@@ -22,7 +29,8 @@ if(isset($_POST['nome'])) {
                 $sql->execute();
 
                 if($sql->rowCount() > 0) {
-                    echo "Esse usuário já existe!";
+                    $usr_error = "Esse usuário já existe!";         
+                    $usr_error_bool = true;        
                     //return false; // usuário já cadastrado
                 }
 
@@ -33,23 +41,30 @@ if(isset($_POST['nome'])) {
                     $user->__set('password', md5($password));
                     $user->__set('date', $entry_date);
                     $user->db_save();
-                    
-                    //echo $user->__get('name');
-                    //echo $user->db_save();
+                    $success = "Cadastro realizado com sucesso!";
+                    $success_bool = true;
+                    header("location: ../View/HTML/Login.html");
                 }
             }
 
             else {
-                echo "As senhas não coincidem!";
+                $pass_error = "As senhas não coincidem!";
+                $pass_error_bool = true;  
+                echo $pass_error;  
+                header("location: ../View/HTML/Cadastro.html");
             }
         }
 
         else {
-            echo "Connection Error: $connection->msg_error";
+            $con_error = "Connection Error: $connection->msg_error";
+            $con_error_bool = true;   
+            header("location: ../View/HTML/Cadastro.html"); 
         }
     }
 
     else {
-        echo "Todos os campos devem ser preenchidos!";
+        $field_error = "Todos os campos devem ser preenchidos!";
+        $field_error_bool = true;    
+        header("location: ../View/HTML/Cadastro.html");
     }
 }

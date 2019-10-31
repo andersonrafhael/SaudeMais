@@ -16,7 +16,7 @@ class Users extends Connection {
     function db_save() {
         $pdo = $this->connect();
        // $sql = $pdo->prepare("INSERT INTO users (usr_code, usr_name, usr_login, usr_password, entry_date) VALUES (2, :p_name, :p_password, :p_login, :p_date)");
-        $sql = $pdo->prepare("INSERT INTO users (usr_cod, usr_name, usr_login, usr_password, entry_date) VALUES (9, ?, ?, ?, str_to_date(?, '%d/%m/%Y %H:%i:%s'))");
+        $sql = $pdo->prepare("INSERT INTO users (usr_name, usr_login, usr_password, entry_date) VALUES (?, ?, ?, str_to_date(?, '%d/%m/%Y %H:%i:%s'))");
       //  $sql->bindValue(":p_name", $this->name);
        // $sql->bindValue(":p_login", $this->login);
       //  $sql->bindValue(":p_password", $this->password);

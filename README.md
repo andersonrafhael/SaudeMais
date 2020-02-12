@@ -9,6 +9,9 @@ Projeto OO
 Para ter acesso ao sistema, basta acessar a URL **saudemais.ddns.net**. 
 (é necessário que o servidor local esteja inicializado)
 
+Para executar o projeto, é preciso ter algum servidor instalado (xampp, wamp), importar o banco de dados
+através do arquivo .sql localizado em DataBase, instalar o Composer e iniciar o Apache;
+
 # Saúde+
 
    O objetivo deste projeto é construir um sistema que exiba diversas informações acerca do serviço público de saúde e apelos à orientações básicas de cuidados necessários para uma boa qualidade de vida e para o bem-estar. O sistema consiste em um conjunto de funcionalidades que permitem que o usuário tenha acesso à informações como: 

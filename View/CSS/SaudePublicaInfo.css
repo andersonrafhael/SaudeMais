@@ -1,0 +1,14 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.container {
+    padding-top: 100px;
+    width: 65%;
+}
+
+.container h2 {
+    
+    text-align: center;
+}

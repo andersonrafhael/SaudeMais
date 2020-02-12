@@ -24,23 +24,22 @@ if(isset($_POST['username'])) {
                 $data = $sql->fetch();
                 session_start();
                 $_SESSION['user_id'] = $data['usr_cod'];
-                header("location: ../View/HTML/MainMenu.html");
+                header("location: ../View/HTML/StartPage.php");
                  // Validação de login concluída. Usuário logado
             }
             else {
-                header("location: ../View/HTML/Login.html");
+                header("location: ../View/HTML/Login.php?senha=Usuário e/ou senha incorretos!");
                 echo "Usuário e/ou senha incorretos!"; // A validação não encontrou um usuário com essas informações
             }
         }
 
         else {
-            header("location: ../View/HTML/Login.html");
-            echo "Connection Error: $connection->msg_error";
+           
+            header("location: ../View/HTML/Login.php?database=erro erro erro $connection->msg_error");
         }
     }
 
     else {
-        header("location: ../View/HTML/Login.html");
-        echo "Preencha todos os campos antes de continuar!";
+        header("location: ../View/HTML/Login.php?preencha=Preencha todos os campos antes de continuar!");
     }
 }

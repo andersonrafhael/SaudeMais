@@ -13,11 +13,24 @@
             <form method="POST" action="../../Controllers/Login.php">
                 <input type="text" placeholder="Nome de Usuário" name="username" id="username"> 
                 <input type="password" placeholder="Senha" name="senha" id="senha">
-                <button type="submit" name="acessar" id="acessar"><strong>Acessar</strong></button>
+                <button type="submit" name="acessar" id="acessar">
+                    <strong><span>Acessar</span></strong>
+                </button>
             </form>
+            
             <div>
-                <a href="">Ainda não é inscrito? <strong>Cadastre-se!</strong></a>
+                <a href="Cadastro.html">Ainda não é inscrito? <strong>Cadastre-se!</strong></a>
             </div>    
         </div>
     </body>
 </html>
+
+<script>
+    alert('<?php echo $_GET['senha'];?>')
+</script>
+<script>
+    alert('<?php echo $_GET['database'];?>')
+</script>
+<script>
+    alert('<?php echo $_GET['preencha'];?>')
+</script>

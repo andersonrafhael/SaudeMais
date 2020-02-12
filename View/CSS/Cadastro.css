@@ -8,7 +8,7 @@ input {
     height: 25px;
     width: 400px;
     margin: 10px;
-    border-radius: 30px;
+    border-radius: 15px;
     border: 1px solid black;
     font-size: 10pt;
     padding: 10px 20px;
@@ -21,13 +21,17 @@ button {
     height: 25px;
     width: 200px;
     margin: 10px;
-    border-radius: 30px;
+    border-radius: 15px;
     border: 1px solid black;
     font-size: 10pt;
-    padding: 10px 20px;
-    background-color: tomato;
-    border: none;
+    background-color: orangered;
     cursor: pointer;
+    left: 42%;
+    position: absolute;
+}
+
+button:hover {
+    background-color: salmon;
 }
 
 body {

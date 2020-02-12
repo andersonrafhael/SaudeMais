@@ -8,11 +8,11 @@ input {
     height: 25px;
     width: 400px;
     margin: 10px;
-    border-radius: 30px;
+    border-radius: 15px;
     border: 1px solid black;
     font-size: 10pt;
     padding: 10px 20px;
-    background-color: rgba(255, 255, 255, 0.01);
+    background-color: rgba(255, 255, 255, 0.664);
     outline: none;
 }
 
@@ -21,17 +21,23 @@ button {
     height: 25px;
     width: 150px;
     margin: 10px;
-    border-radius: 30px;
+    border-radius: 15px;
     border: 1px solid black;
     font-size: 10pt;
-    padding: 10px 20px;
-    background-color: tomato;
-    border: none;
+    background-color: orangered;
     cursor: pointer;
+    left: 44%;
+    position: absolute;
+}
+
+button:hover {
+    background-color: salmon;
 }
 
 body {
-    /*background-image: url("../CSS/background3.jpg");*/
+    background-image: url("../../Images/Wall/wall4.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 div#corpo_login {
@@ -47,10 +53,14 @@ div#corpo_login h1 {
 
 a {
     color: black;
+    font-size: 14px;
     text-decoration: none;
     text-align: center;
     display: block;
     width: 150px;
+    position: absolute;
+    left: 45%;
+    top: 64%;
 }
 
 a:hover {
@@ -58,5 +68,5 @@ a:hover {
 }
 
 input[id=acessar] {
-    background-color: tomato;
+    background-color: orangered;
 }
